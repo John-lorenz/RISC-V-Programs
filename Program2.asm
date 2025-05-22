@@ -1,12 +1,7 @@
-# Disciplina: Arquitetura e Organização de Processadores
-# Atividade: Avaliação M2 – Programação em Linguagem de Montagem
-# Programa 02 - Imprimir 10 primos a partir de 100
-# Grupo: - João Arthur dos Santos Lorenzoni
-#        - Lucas Francelino
 
 .data
     espaco: .string " "
-    msg_inicio: .string "Os 10 primeiros números primos a partir de 100 são:\n"
+    msg_inicio: .string "Os 10 primeiros nÃºmeros primos a partir de 100 sÃ£o:\n"
 
 .text
 .global main
@@ -17,14 +12,14 @@ main:
     li a7, 4
     ecall
 
-    # Chamar função para imprimir primos
+    # Chamar funÃ§Ã£o para imprimir primos
     jal ra, imprimirPrimos
 
     # Terminar programa
     li a7, 10
     ecall
 
-# Função que imprime 10 números primos a partir de 100
+# FunÃ§Ã£o que imprime 10 nÃºmeros primos a partir de 100
 imprimirPrimos:
     addi sp, sp, -12
     sw ra, 8(sp)
@@ -32,19 +27,19 @@ imprimirPrimos:
     sw s1, 0(sp)
 
     li s0, 0       # contador de primos
-    li s1, 100     # número inicial
+    li s1, 100     # nÃºmero inicial
 
 loop_imprimir:
     mv a0, s1
     jal ra, ehPrimo
     beqz a0, nao_primo
 
-    # Imprimir número primo
+    # Imprimir nÃºmero primo
     mv a0, s1
     li a7, 1
     ecall
 
-    # Imprimir espaço
+    # Imprimir espaÃ§o
     la a0, espaco
     li a7, 4
     ecall
@@ -62,7 +57,7 @@ nao_primo:
     addi sp, sp, 12
     ret
 
-# Função de verificação de primo (igual ao Programa 1)
+# FunÃ§Ã£o de verificaÃ§Ã£o de primo (igual ao Programa 1)
 ehPrimo:
     li t0, 2
     blt a0, t0, naoEh
