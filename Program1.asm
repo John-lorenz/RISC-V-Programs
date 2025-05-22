@@ -1,28 +1,22 @@
-# Disciplina: Arquitetura e Organização de Processadores
-# Atividade: Avaliação M2 – Programação em Linguagem de Montagem
-# Programa 01 - Verificação de número primo
-# Grupo: - João Arthur dos Santos Lorenzoni
-#        - Lucas Francelino
-
 .data
-    msg_primo:    .string "O número é primo.\n"
-    msg_nao_primo: .string "O número não é primo.\n"
-    prompt_numero: .string "Digite um número para verificação: "
+    msg_primo:    .string "O nÃºmero Ã© primo.\n"
+    msg_nao_primo: .string "O nÃºmero nÃ£o Ã© primo.\n"
+    prompt_numero: .string "Digite um nÃºmero para verificaÃ§Ã£o: "
 
 .text
 .global main
 
 main:
-    # Solicitar entrada do usuário
+    # Solicitar entrada do usuÃ¡rio
     la a0, prompt_numero
     li a7, 4
     ecall
 
-    # Ler número do usuário
+    # Ler nÃºmero do usuÃ¡rio
     li a7, 5
     ecall
 
-    # Verificar se é primo
+    # Verificar se Ã© primo
     jal ra, ehPrimo
 
     # Exibir resultado
@@ -41,9 +35,9 @@ imprimir:
     li a7, 10
     ecall
 
-# Função que verifica se um número é primo
-# Entrada: a0 = número a verificar
-# Saída: a0 = 1 se primo, 0 se não primo
+# FunÃ§Ã£o que verifica se um nÃºmero Ã© primo
+# Entrada: a0 = nÃºmero a verificar
+# SaÃ­da: a0 = 1 se primo, 0 se nÃ£o primo
 ehPrimo:
     li t0, 2
     blt a0, t0, naoEh
