@@ -1,9 +1,3 @@
-# Disciplina: Arquitetura e Organiza��o de Processadores
-# Atividade: Avalia��o M2 � Programa��o em Linguagem de Montagem
-# Programa 03 - Soma recursiva de vetor
-# Grupo: - Jo�o Arthur dos Santos Lorenzoni
-#        - Lucas Francelino
-
 .data
     vetor:      .word 1, 2, 6, 4, 5
     msg_resultado: .string "A soma dos elementos do vetor �: "
