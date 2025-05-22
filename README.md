@@ -10,7 +10,7 @@ Descrição:
 Este programa implementa um procedimento que recebe um número inteiro e retorna 1 se for primo ou 0 caso contrário.
 O algoritmo realiza divisões sucessivas até √n para verificar se o número possui algum divisor além de 1 e ele mesmo. </p>
 
-<h3> Características: </h3>
+<h4> Características: </h4>
 
 Procedimento folha (não chama outros procedimentos).
 
