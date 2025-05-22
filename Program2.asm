@@ -1,4 +1,3 @@
-
 .data
     espaco: .string " "
     msg_inicio: .string "Os 10 primeiros números primos a partir de 100 são:\n"
